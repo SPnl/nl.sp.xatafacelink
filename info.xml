@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<extension key="nl.sp.xatafacelink" type="module">
+  <file>xatafacelink</file>
+  <name>Link to Xataface</name>
+  <description>Adds a link to Xataface from the contact dashboard</description>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>Kevin Levie</author>
+    <email>kevin@levity.nl</email>
+  </maintainer>
+  <releaseDate>2014-11-24</releaseDate>
+  <version>1.0</version>
+  <develStage>beta</develStage>
+  <compatibility>
+    <ver>4.2</ver>
+  </compatibility>
+  <civix>
+    <namespace>CRM/Xatafacelink</namespace>
+  </civix>
+</extension>
