@@ -15,7 +15,7 @@ function xatafacelink_civicrm_pageRun(&$page) {
 				'template' => "CRM/Contact/Page/View/Summary/link_to_xataface.tpl"
 			));
 			$smarty = CRM_Core_Smarty::singleton();
-			$smarty->assign('link_to_xataface', '/xataface/legacy/index.php?-table=mem_adr&-action=browse&-mode=list&-recordid=mem_adr%3Fregnr%3D' . $page->getVar('_contactId'));
+			$smarty->assign('link_to_xataface', '/xataface/legacy/index.php?-table=adr001&-action=view&REGNR=' . $page->getVar('_contactId'));
 		}
 }
 
