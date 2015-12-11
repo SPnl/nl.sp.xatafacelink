@@ -11,12 +11,15 @@ require_once 'xatafacelink.civix.php';
  */
 function xatafacelink_civicrm_pageRun(&$page) {
 	if ($page instanceof CRM_Contact_Page_View_Summary) {
-			CRM_Core_Region::instance('page-body')->add(array(
-				'template' => "CRM/Contact/Page/View/Summary/link_to_xataface.tpl"
-			));
-			$smarty = CRM_Core_Smarty::singleton();
-			$smarty->assign('link_to_xataface', '/xataface/legacy/index.php?-table=adr001&-action=view&REGNR=' . $page->getVar('_contactId'));
-		}
+        $contactId = $page->getVar('_contactId');
+        if (CRM_Contact_BAO_Contact_Permission::allow($contactId, CRM_Core_Permission::EDIT)) {
+            CRM_Core_Region::instance('page-body')->add(array(
+                'template' => "CRM/Contact/Page/View/Summary/link_to_xataface.tpl"
+            ));
+            $smarty = CRM_Core_Smarty::singleton();
+            $smarty->assign('link_to_xataface', '/xataface/legacy/index.php?-table=adr001&-action=view&REGNR=' . $page->getVar('_contactId'));
+        }
+    }
 }
 
 /**
