@@ -1,0 +1,13 @@
+{
+    "name": "spnl/nl.sp.xatafacelink",
+    "description": "Adds a link to Xataface from the contact dashboard",
+    "type": "civicrm-module",
+    "license": "AGPL-3.0",
+    "authors": [
+        {
+            "name": "Kevin Levie",
+            "email": "kevin@levity.nl"
+        }
+    ],
+    "require": {}
+}
